@@ -1,10 +1,10 @@
 //Step 1: Install Theme Switcher Dependency
 //The easiest way is to use next-themes, which works perfectly with Tailwind.
 // Run the following command in your terminal to install next-themes:
-npm install next-themes tailwindcss
+npm install next-themes tailwindcss postcss autoprefixer
 //Update tailwind.config.js
 //Enable dark mode (class-based):
-npm run dev
+npx tailwindcss init -p
 module.exports = {
   darkMode: "class", // <- add this line
   content: [
@@ -21,7 +21,7 @@ module.exports = {
 import { ThemeProvider } from "next-themes";
 import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
       <Component {...pageProps} />
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default App;
 //Step 4: Create Dark/Light Toggle Button
 //Move the ThemeToggle component to a new file, e.g., components/ThemeToggle.js
 //Step 5: Apply Dark Styles
