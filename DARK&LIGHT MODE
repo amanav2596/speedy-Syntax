@@ -1,10 +1,10 @@
 //Step 1: Install Theme Switcher Dependency
 //The easiest way is to use next-themes, which works perfectly with Tailwind.
 // Run the following command in your terminal to install next-themes:
-// npm install next-themes
+npm install next-themes tailwindcss
 //Update tailwind.config.js
 //Enable dark mode (class-based):
-// tailwind.config.js
+npm run dev
 module.exports = {
   darkMode: "class", // <- add this line
   content: [
